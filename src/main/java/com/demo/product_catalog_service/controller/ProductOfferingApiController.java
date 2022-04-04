@@ -19,6 +19,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 import java.io.IOException;
 import java.util.List;
+
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2022-04-01T14:42:25.852+07:00")
 
 @Controller
@@ -36,7 +37,7 @@ public class ProductOfferingApiController implements ProductOfferingApi {
         this.request = request;
     }
 
-    public ResponseEntity<ProductOffering> createProductOffering(@ApiParam(value = "The ProductOffering to be created" ,required=true )  @Valid @RequestBody ProductOfferingCreate productOffering) {
+    public ResponseEntity<ProductOffering> createProductOffering(@ApiParam(value = "The ProductOffering to be created", required = true) @Valid @RequestBody ProductOfferingCreate productOffering) {
         String accept = request.getHeader("Accept");
         if (accept != null && accept.contains("application/json")) {
             try {
@@ -50,12 +51,12 @@ public class ProductOfferingApiController implements ProductOfferingApi {
         return new ResponseEntity<ProductOffering>(HttpStatus.NOT_IMPLEMENTED);
     }
 
-    public ResponseEntity<Void> deleteProductOffering(@ApiParam(value = "Identifier of the ProductOffering",required=true) @PathVariable("id") String id) {
+    public ResponseEntity<Void> deleteProductOffering(@ApiParam(value = "Identifier of the ProductOffering", required = true) @PathVariable("id") String id) {
         String accept = request.getHeader("Accept");
         return new ResponseEntity<Void>(HttpStatus.NOT_IMPLEMENTED);
     }
 
-    public ResponseEntity<List<ProductOffering>> listProductOffering(@ApiParam(value = "Comma-separated properties to be provided in response") @Valid @RequestParam(value = "fields", required = false) String fields,@ApiParam(value = "Requested index for start of resources to be provided in response") @Valid @RequestParam(value = "offset", required = false) Integer offset,@ApiParam(value = "Requested number of resources to be provided in response") @Valid @RequestParam(value = "limit", required = false) Integer limit) {
+    public ResponseEntity<List<ProductOffering>> listProductOffering(@ApiParam(value = "Comma-separated properties to be provided in response") @Valid @RequestParam(value = "fields", required = false) String fields, @ApiParam(value = "Requested index for start of resources to be provided in response") @Valid @RequestParam(value = "offset", required = false) Integer offset, @ApiParam(value = "Requested number of resources to be provided in response") @Valid @RequestParam(value = "limit", required = false) Integer limit) {
         String accept = request.getHeader("Accept");
         if (accept != null && accept.contains("application/json")) {
             try {
@@ -69,7 +70,7 @@ public class ProductOfferingApiController implements ProductOfferingApi {
         return new ResponseEntity<List<ProductOffering>>(HttpStatus.NOT_IMPLEMENTED);
     }
 
-    public ResponseEntity<ProductOffering> patchProductOffering(@ApiParam(value = "Identifier of the ProductOffering",required=true) @PathVariable("id") String id,@ApiParam(value = "The ProductOffering to be updated" ,required=true )  @Valid @RequestBody ProductOfferingUpdate productOffering) {
+    public ResponseEntity<ProductOffering> patchProductOffering(@ApiParam(value = "Identifier of the ProductOffering", required = true) @PathVariable("id") String id, @ApiParam(value = "The ProductOffering to be updated", required = true) @Valid @RequestBody ProductOfferingUpdate productOffering) {
         String accept = request.getHeader("Accept");
         if (accept != null && accept.contains("application/json")) {
             try {
@@ -83,7 +84,7 @@ public class ProductOfferingApiController implements ProductOfferingApi {
         return new ResponseEntity<ProductOffering>(HttpStatus.NOT_IMPLEMENTED);
     }
 
-    public ResponseEntity<ProductOffering> retrieveProductOffering(@ApiParam(value = "Identifier of the ProductOffering",required=true) @PathVariable("id") String id,@ApiParam(value = "Comma-separated properties to provide in response") @Valid @RequestParam(value = "fields", required = false) String fields) {
+    public ResponseEntity<ProductOffering> retrieveProductOffering(@ApiParam(value = "Identifier of the ProductOffering", required = true) @PathVariable("id") String id, @ApiParam(value = "Comma-separated properties to provide in response") @Valid @RequestParam(value = "fields", required = false) String fields) {
         String accept = request.getHeader("Accept");
         if (accept != null && accept.contains("application/json")) {
             try {
