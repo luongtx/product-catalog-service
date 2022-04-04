@@ -20,10 +20,10 @@ host: serverRoot
 basePath: /tmf-api/productCatalogManagement/v4/
 schemes:
   - https
-consumes:
-  - application/json;charset=utf-8
-produces:
-  - application/json;charset=utf-8
+#consumes:
+#  - application/json;charset=utf-8
+#produces:
+#  - application/json;charset=utf-8
 tags:
   - name: catalog
   - name: category
