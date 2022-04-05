@@ -71,10 +71,14 @@ public class ProductOfferingApiController implements ProductOfferingApi {
     public ResponseEntity<ProductOffering> retrieveProductOffering(@ApiParam(value = "Identifier of the ProductOffering", required = true) @PathVariable("id") String id, @ApiParam(value = "Comma-separated properties to provide in response") @Valid @RequestParam(value = "fields", required = false) String fields) {
         ProductOffering productOffering = new ProductOffering();
         productOffering.setId("1");
-        productOffering.setName("sample product 1");
+        productOffering.setName("Sample Product 1");
+        productOffering.setDescription("product offering from catalog provider");
         productOffering.setHref("http://example.com");
+        productOffering.setType("sample");
         productOffering.setBaseType("baseType1");
         productOffering.setSchemaLocation("schemaLocation1");
+        productOffering.isBundle(false);
+        productOffering.setVersion("v1.0-release");
         return new ResponseEntity<ProductOffering>(productOffering, HttpStatus.OK);
     }
 
